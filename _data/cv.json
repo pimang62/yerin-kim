@@ -3,7 +3,6 @@
     "name": "Ye Rin Kim",
     "label": "M.S. Student in Artificial Intelligence, Korea University",
     "email": "yerin-kim@korea.ac.kr",
-    "phone": "",
     "website": "https://pimang62.github.io/yerin-kim",
     "summary": "I'm interested in Artificial Intelligence (AI), including Large Language Models and Multi-Modal Models.",
     "location": {
@@ -33,12 +32,11 @@
   "work": [
     {
       "company": "LG AI Research",
-      "position": "AI Research Engineer, Post-Training Department (Language Lab)",
+      "position": "AI Research Engineer, Language Lab",
       "startDate": "2024-08",
       "endDate": "2025-07",
-      "summary": "Supervised Fine-Tuning and Alignment Tuning for Chat-LLM. Supervisor: Dr. Dongkyu Lee.",
+      "summary": "Supervised Fine-Tuning and Alignment Tuning for Chat-LLM.",
       "highlights": [
-        "Project: Supervised Fine-Tuning and Alignment Tuning for Chat-LLM",
         "Supervisor: Dr. Dongkyu Lee",
         "Focus: Auto-Eval, Synthesizing Preference Train-Sets, and Inference Optimization"
       ]
