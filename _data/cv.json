@@ -1,62 +1,67 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Ye Rin Kim",
+    "label": "M.S. Student in Artificial Intelligence, Korea University",
+    "email": "yerin-kim@korea.ac.kr",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://yerin-kim.github.io",
+    "summary": "I'm interested in Artificial Intelligence (AI), including Large Language Models and Multi-Modal Models.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
+      "city": "Seoul",
+      "countryCode": "KR",
       "region": ""
     },
     "profiles": [
       {
+        "network": "GitHub",
+        "username": "pimang62",
+        "url": "https://github.com/pimang62"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "pimang62",
+        "url": "https://www.linkedin.com/in/pimang62"
+      },
+      {
         "network": "Google Scholar",
         "username": "",
         "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
-        "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "LG AI Research",
+      "position": "AI Research Engineer, Post-Training Department (Language Lab)",
+      "startDate": "2024-08",
+      "endDate": "2025-07",
+      "summary": "Supervised Fine-Tuning and Alignment Tuning for Chat-LLM. Supervisor: Dr. Dongkyu Lee.",
+      "highlights": [
+        "Project: Supervised Fine-Tuning and Alignment Tuning for Chat-LLM",
+        "Supervisor: Dr. Dongkyu Lee",
+        "Focus: Auto-Eval, Synthesizing Preference Train-Sets, and Inference Optimization"
+      ]
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "Korea University",
+      "area": "M.S. in Artificial Intelligence",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
+      "startDate": "2025-09",
+      "endDate": "Present",
+      "gpa": "4.0/4.5",
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "Kyung Hee University, Seoul, South Korea",
+      "area": "B.S. in Physics",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
+      "startDate": "2017-03",
+      "endDate": "2022-02",
+      "gpa": "3.65/4.3",
       "courses": []
     }
   ],
