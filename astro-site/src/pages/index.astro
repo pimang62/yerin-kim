@@ -8,6 +8,7 @@ const selected = publications.filter((p) => p.selected).slice(0, 5);
 <Base>
   <section class="hero">
     <div>
+      <p class="kicker">{profile.affiliation}</p>
       <p class="lede" set:html={profile.bioHtml} />
       <nav class="profile-links" aria-label="Profile links">
         <a href={base + '/publications/'}>Publications</a>
