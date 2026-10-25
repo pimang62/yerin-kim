@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { education, experience, awards, services, teaching, profile } from '../data/profile.js';
+---
+<Base title={'CV · ' + profile.name}>
+  <h1 style="margin-top:2.5rem">CV</h1>
+
+  <h2>Research interests</h2>
+  <p style="color:var(--muted)">{profile.interests}</p>
+
+  <h2>Education</h2>
+  <table class="cvtable">{education.map((e) => <tr><td class="when">{e.when}</td><td>{e.what}</td></tr>)}</table>
+
+  <h2>Experience</h2>
+  <table class="cvtable">{experience.map((e) => <tr><td class="when">{e.when}</td><td>{e.what}</td></tr>)}</table>
+
+  {awards.length > 0 && (
+    <>
+      <h2>Awards & grants</h2>
+      <table class="cvtable">{awards.map((e) => <tr><td class="when">{e.when}</td><td>{e.what}</td></tr>)}</table>
+    </>
+  )}
+
+  {services.length > 0 && (
+    <>
+      <h2>Academic service</h2>
+      <ul>{services.map((s) => <li style="color:var(--muted)">{s}</li>)}</ul>
+    </>
+  )}
+
+  {teaching.length > 0 && (
+    <>
+      <h2>Teaching</h2>
+      <table class="cvtable">{teaching.map((e) => <tr><td class="when">{e.when}</td><td>{e.what}</td></tr>)}</table>
+    </>
+  )}
+</Base>

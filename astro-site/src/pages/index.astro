@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import { profile, news } from '../data/profile.js';
+import { publications } from '../data/publications.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const selected = publications.filter((p) => p.selected).slice(0, 5);
+---
+<Base>
+  <section class="hero">
+    <div>
+      <p class="lede" set:html={profile.bioHtml} />
+      <nav class="profile-links" aria-label="Profile links">
+        <a href={base + '/publications/'}>Publications</a>
+        <a href={base + '/cv/'}>CV</a>
+        <a href={profile.links.scholar}>Scholar</a>
+        <a href={'mailto:' + profile.email}>Email</a>
+      </nav>
+    </div>
+    <div style="text-align:center">
+      <img class="avatar" src={base + '/img/profile.png'} alt={profile.name} />
+    </div>
+  </section>
+
+  <h2>Research overview</h2>
+  <p style="color:var(--muted);margin:0.6rem 0 0">
+    My research centers on <strong>large language models and multi-modal models</strong>,
+    and on making them reason more reliably and align with human intent. Recently I have
+    been working on reasoning LLMs and agents for scientific discovery — including molecular
+    design, retrosynthesis, and chemical reaction prediction — as well as multi-modal
+    reasoning for image generation.
+  </p>
+
+  <h2>News</h2>
+  <ul style="list-style:none;padding:0;margin:0.8rem 0">
+    {news.map((n) => (
+      <li style="padding:0.35rem 0;color:var(--muted)">
+        <span style="color:var(--faint);font-size:0.85rem;margin-right:0.7rem">{n.date}</span>{n.text}
+      </li>
+    ))}
+  </ul>
+
+  <h2>Selected publications <span class="section-note" style="font-weight:400">· <a href={base + '/publications/'}>full list →</a></span></h2>
+  <div style="margin-top:0.4rem">
+    {selected.map((p) => (
+      <div class="pub">
+        <p class="title">{p.title}</p>
+        <p class="venue">{p.venue}</p>
+        {Object.keys(p.links || {}).length > 0 && (
+          <div class="pubLinks">
+            {Object.entries(p.links).map(([k, v]) => <a href={v}>[{k}]</a>)}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <h2>Get in touch</h2>
+  <p style="color:var(--muted);margin:0.6rem 0 0">
+    I am always happy to connect and open to collaborations on LLMs, multi-modal models,
+    reasoning agents, or anything adjacent. Reach me at
+    <a href={'mailto:' + profile.email}>{profile.email}</a>, or find me on
+    <a href={profile.links.linkedin}>LinkedIn</a> and
+    <a href={profile.links.scholar}>Google Scholar</a>.
+  </p>
+</Base>

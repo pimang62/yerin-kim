@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+import { profile } from '../data/profile.js';
+const { title = profile.name, description = profile.tagline } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // "/yerin-kim" (no trailing slash)
+const path = Astro.url.pathname.replace(/\/$/, '');
+const active = (p) => (path === base + (p ? '/' + p : '')) ? 'active' : '';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={base + '/favicon.svg'} type="image/svg+xml" />
+    <script is:inline>
+      const t = localStorage.getItem('theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = t;
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="topnav">
+        <a class="brand" href={base + '/'} style="text-decoration:none">{profile.name}</a>
+        <div class="links">
+          <a href={base + '/publications/'} class={active('publications')}>Publications</a>
+          <a href={base + '/cv/'} class={active('cv')}>CV</a>
+          <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+        </div>
+      </nav>
+      <main><slot /></main>
+      <footer class="site">
+        <p>Always happy to connect & collaborate: <a href={'mailto:' + profile.email}>{profile.email}</a></p>
+        <p>© {new Date().getFullYear()} {profile.name} · built with Astro · find me on
+          <a href={profile.links.github}>GitHub</a>, <a href={profile.links.scholar}>Scholar</a>,
+          <a href={profile.links.linkedin}>LinkedIn</a> · <a href={'mailto:' + profile.email}>email</a></p>
+      </footer>
+    </div>
+    <script is:inline>
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const cur = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = cur;
+        localStorage.setItem('theme', cur);
+      });
+    </script>
+  </body>
+</html>

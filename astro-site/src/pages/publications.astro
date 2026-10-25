@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import { publications } from '../data/publications.js';
+import { profile } from '../data/profile.js';
+const bold = (authors) =>
+  authors.replace(/Ye Rin Kim(\*?)/g, '<span class="me">Ye Rin Kim$1</span>');
+const groups = [
+  {
+    label: 'Preprints & under review',
+    prefix: 'P',
+    items: publications.filter((p) => p.category === 'preprint'),
+  },
+  {
+    label: 'Conference papers',
+    prefix: 'C',
+    items: publications.filter((p) => p.category === 'conference'),
+  },
+];
+---
+<Base title={'Publications · ' + profile.name}>
+  <h1 style="margin-top:2.5rem">Publications</h1>
+  <p class="section-note">* equal contribution · † corresponding author</p>
+  {groups.map((g) => (
+    <section class="publication-section">
+      <h2>{g.label}</h2>
+      {g.items.map((p, index) => (
+        <article class="citation">
+          <div class="citation-index">[{g.prefix}{g.items.length - index}]</div>
+          <div>
+            <h3 class="citation-title">
+              {p.links?.paper ? <a href={p.links.paper}>{p.title}</a> : p.title}
+            </h3>
+            <p class="citation-authors" set:html={bold(p.authors)} />
+            <p class="citation-meta">
+              <span class="citation-venue">{p.venue}</span>
+              {Object.keys(p.links || {}).length > 0 && (
+                <span class="citation-links">
+                  {Object.entries(p.links).map(([k, v]) => <a href={v}>[{k}]</a>)}
+                </span>
+              )}
+            </p>
+          </div>
+        </article>
+      ))}
+    </section>
+  ))}
+</Base>
