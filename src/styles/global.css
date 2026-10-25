@@ -11,19 +11,20 @@
   --hold-purple: #7f77dd;
   --hold-pink: #d4537e;
   --hold-amber: #ef9f27;
-  --accent: #284f6a;
-  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --accent: #4f46e5;
+  --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --serif: var(--display); /* legacy alias: headings/titles now use the display grotesque */
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 [data-theme="dark"] {
-  --bg: #171410;
-  --surface: #211d17;
-  --text: #ece7dc;
-  --muted: #a8a294;
-  --faint: #6f6a5e;
-  --border: #383226;
-  --chalk: #2a251c;
-  --accent: #91b9d2;
+  --bg: #15161c;
+  --surface: #1c1e27;
+  --text: #e8e9f0;
+  --muted: #a3a6b8;
+  --faint: #6c6f82;
+  --border: #2c2f3c;
+  --chalk: #22242e;
+  --accent: #a5b4fc;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -39,28 +40,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.25s, color 0.25s;
 }
-::selection { background: rgba(40, 79, 106, 0.18); }
+::selection { background: rgba(79, 70, 229, 0.16); }
 .container { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
 
-h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.22; letter-spacing: -0.012em; font-optical-sizing: auto; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; text-wrap: balance; }
 h1 { font-size: 2.2rem; }
-h2 { font-size: 1.4rem; margin-top: 2.6rem; margin-bottom: 0.6rem; }
-h3 { font-size: 1.08rem; }
-h2::after {
-  content: "";
-  display: block;
-  width: 36px; height: 4px;
-  margin-top: 7px;
-  background: var(--accent);
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.6rem;
+  margin-bottom: 0.9rem;
+  display: inline-block;      /* underline hugs the heading text, so each section's rule is a different length */
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 6px;
 }
+h3 { font-size: 1.08rem; }
 
 nav.topnav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 1rem 0; border-bottom: 1px solid var(--border);
 }
-nav.topnav .brand { font-family: var(--serif); font-weight: 700; font-size: 1.12rem; color: var(--text); }
+nav.topnav .brand { font-family: var(--display); font-weight: 700; font-size: 1rem; color: var(--text); text-transform: uppercase; letter-spacing: 0.06em; }
 nav.topnav .links { display: flex; gap: 1.1rem; flex-wrap: wrap; align-items: center; }
 nav.topnav .links a { color: var(--muted); font-size: 0.92rem; }
 nav.topnav .links a:hover, nav.topnav .links a.active { color: var(--text); text-decoration: none; }
@@ -105,7 +106,6 @@ nav.topnav .links a .sub { color: var(--faint); font-size: 0.8rem; }
 
 .publication-section { margin-top: 2.6rem; }
 .publication-section h2 { margin-bottom: 0.9rem; }
-.publication-section h2::after { width: 100%; height: 1px; margin-top: 4px; background: var(--text); }
 .citation {
   display: grid;
   grid-template-columns: 3.2rem minmax(0, 1fr);
@@ -130,16 +130,16 @@ nav.topnav .links a .sub { color: var(--faint); font-size: 0.8rem; }
 .citation-authors {
   margin: 0;
   color: var(--muted);
-  font-family: var(--serif);
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 .citation-authors .me { color: var(--text); font-weight: 700; }
 .citation-meta {
-  margin: 0.05rem 0 0;
-  font-family: var(--serif);
-  font-size: 0.9rem;
-  line-height: 1.45;
+  margin: 0.1rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 .citation-venue { color: var(--text); font-style: italic; font-weight: 600; }
 .citation-links { display: inline-flex; gap: 0.35rem; margin-left: 0.45rem; font-family: inherit; }
