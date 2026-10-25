@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Ye Rin Kim",
-    "label": "M.S. Student in Artificial Intelligence, Korea University",
+    "label": "Current M.S. Student in Artificial Intelligence, Korea University",
     "email": "yerin-kim@korea.ac.kr",
     "website": "https://pimang62.github.io/yerin-kim",
     "summary": "I'm interested in Artificial Intelligence (AI), including Large Language Models and Multi-Modal Models.",
@@ -68,10 +68,17 @@
   "references": [],
   "publications": [
     {
+      "name": "RetroPlanner: Multi-Route Expansion and Multi-Objective Reasoning for LLM-Based Retrosynthesis Planning",
+      "publisher": "ICLR 2027 (Under Review)",
+      "releaseDate": "2026-10-12",
+      "website": "https://arxiv.org/abs/2610.16391",
+      "summary": "Ye Rin Kim, Yongjun Jeong, Seongjun Yun, et al."
+    },
+    {
       "name": "FiRe: Fine-grained Multimodal Reasoning for Enhanced Image Generation",
-      "publisher": "NeurIPS 2026 (Under Review)",
+      "publisher": "NeurIPS 2026",
       "releaseDate": "2026-12-01",
-      "website": "https://arxiv.org/abs/2604.13491",
+      "website": "https://openreview.net/forum?id=RBlcBaykle",
       "summary": "Yongjin Kim, Yoonjin Oh, Ye Rin Kim, et al."
     },
     {
