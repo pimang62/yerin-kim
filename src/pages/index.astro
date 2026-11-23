@@ -42,15 +42,18 @@ const selected = publications.filter((p) => p.selected).slice(0, 5);
 
   <h2>Selected publications <span class="section-note" style="font-weight:400">· <a href={base + '/publications/'}>full list →</a></span></h2>
   <div style="margin-top:0.4rem">
-    {selected.map((p) => (
+    {selected.map((p, i) => (
       <div class="pub">
-        <p class="title">{p.title}</p>
-        <p class="venue">{p.venue}</p>
-        {Object.keys(p.links || {}).length > 0 && (
-          <div class="pubLinks">
-            {Object.entries(p.links).map(([k, v]) => <a href={v}>[{k}]</a>)}
-          </div>
-        )}
+        <div class="index">{String(i + 1).padStart(2, '0')}</div>
+        <div>
+          <p class="title">{p.title}</p>
+          <p class="venue">{p.venue}</p>
+          {Object.keys(p.links || {}).length > 0 && (
+            <div class="pubLinks">
+              {Object.entries(p.links).map(([k, v]) => <a href={v}>[{k}]</a>)}
+            </div>
+          )}
+        </div>
       </div>
     ))}
   </div>

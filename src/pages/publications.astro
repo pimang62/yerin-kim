@@ -7,15 +7,14 @@ const bold = (authors) =>
 const groups = [
   {
     label: 'Preprints & under review',
-    prefix: 'P',
     items: publications.filter((p) => p.category === 'preprint'),
   },
   {
     label: 'Conference papers',
-    prefix: 'C',
     items: publications.filter((p) => p.category === 'conference'),
   },
 ];
+const pad = (n) => String(n).padStart(2, '0');
 ---
 <Base title={'Publications · ' + profile.name}>
   <h1 style="margin-top:2.5rem">Publications</h1>
@@ -25,7 +24,7 @@ const groups = [
       <h2>{g.label}</h2>
       {g.items.map((p, index) => (
         <article class="citation">
-          <div class="citation-index">[{g.prefix}{g.items.length - index}]</div>
+          <div class="citation-index">{pad(index + 1)}</div>
           <div>
             <h3 class="citation-title">
               {p.links?.paper ? <a href={p.links.paper}>{p.title}</a> : p.title}
