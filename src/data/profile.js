@@ -18,10 +18,10 @@ export const profile = {
   bioHtml: `
     I am a current M.S. student in Artificial Intelligence at
     <strong>Korea University</strong>, studying large language models and multi-modal
-    models. I am especially interested in making these models reason more reliably and
-    align with what people actually intend. Previously, I was an AI Research Engineer in
-    the Language Lab at <strong>LG AI Research</strong>, working on supervised fine-tuning
-    and alignment tuning for chat LLMs. I hold a B.S. in Physics from Kyung Hee University.
+    models, supervised by <a href="https://sites.google.com/view/swkim">Sungwoong Kim</a>
+    and <a href="https://www.sungbin-lim.net/">Sungbin Lim</a>. I am especially interested
+    in making these models reason more reliably and align with what people actually intend.
+    I hold a B.S. in Physics from Kyung Hee University.
   `,
 };
 

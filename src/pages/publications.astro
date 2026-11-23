@@ -3,7 +3,10 @@ import Base from '../layouts/Base.astro';
 import { publications } from '../data/publications.js';
 import { profile } from '../data/profile.js';
 const bold = (authors) =>
-  authors.replace(/Ye Rin Kim(\*?)/g, '<span class="me">Ye Rin Kim$1</span>');
+  authors
+    .replace(/Ye Rin Kim(\*?)/g, '<span class="me">Ye Rin Kim$1</span>')
+    .replace(/Sungwoong Kim/g, '<a href="https://sites.google.com/view/swkim">Sungwoong Kim</a>')
+    .replace(/Sungbin Lim/g, '<a href="https://www.sungbin-lim.net/">Sungbin Lim</a>');
 const groups = [
   {
     label: 'Preprints & under review',
