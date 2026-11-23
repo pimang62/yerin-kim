@@ -18,14 +18,14 @@ export const publications = [
     title: "FiRe: Fine-grained Multimodal Reasoning for Enhanced Image Generation",
     authors: "Yongjin Kim, Yoonjin Oh*, Ye Rin Kim*, Hyomin Kim, Jeeyoung Yun, Yujung Heo, Minjun Kim, Sungwoong Kim",
     venue: "NeurIPS 2026",
-    links: { paper: "https://openreview.net/forum?id=RBlcBaykle" },
+    links: { paper: "https://arxiv.org/pdf/2604.13491" },
   },
   {
     year: 2026, category: "conference", selected: true,
     title: "MolDesignBench: Evaluating LLM-based Agent for Scenario-grounded Molecular Design",
     authors: "Yongjun Jung, Hanbum Ko, Ye Rin Kim, Chanhui Lee, Rodrigo Hormazabal, Jaewan Lee, Sehui Han, Sungbin Lim†, Sungwoong Kim†",
     venue: "COLM 2026",
-    links: { paper: "https://openreview.net/forum?id=4yhL4Wk0oW" },
+    links: { paper: "https://arxiv.org/pdf/2609.27349" },
   },
   {
     year: 2026, category: "conference",
