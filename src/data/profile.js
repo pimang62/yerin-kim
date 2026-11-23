@@ -41,6 +41,7 @@ export const education = [
 
 export const experience = [
   { when: "Aug 2024 – Jul 2025", what: "LG AI Research · AI Research Engineer, Language Lab (supervised by Dr. Dongkyu Lee): supervised fine-tuning and alignment tuning for chat LLMs — auto-evaluation, preference-set synthesis, and inference optimization" },
+  { when: "Jan 2024 – Jul 2024", what: "MediaZen · AI Research Engineer, NLP Department: retrieval embedding model (BERT) training" },
 ];
 
 // Optional CV sections. Leave an array empty to hide its section.
