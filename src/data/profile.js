@@ -17,13 +17,12 @@ export const profile = {
   },
   bioHtml: `
     I am a current M.S. student in Artificial Intelligence at
-    <strong>Korea University</strong>, studying large language models and multi-modal
-    models, supervised by <a href="https://sites.google.com/view/swkim">Sungwoong Kim</a>
-    and <a href="https://www.sungbin-lim.net/">Sungbin Lim</a>. I am a member of the
-    <a href="https://agi.korea.ac.kr/">AGI Lab</a>, advised by Prof. Sungbin Lim. I am
-    especially interested in making these
-    models reason more reliably and align with what people actually intend. I hold a
-    B.S. in Physics from Kyung Hee University.
+    <strong>Korea University</strong>, where I am a member of the
+    <a href="https://agi.korea.ac.kr/">AGI Lab</a>, studying large language models and
+    multi-modal models, supervised by <a href="https://sites.google.com/view/swkim">Sungwoong Kim</a>
+    and <a href="https://www.sungbin-lim.net/">Sungbin Lim</a>. I am especially interested
+    in making these models reason more reliably and align with what people actually intend.
+    I hold a B.S. in Physics from Kyung Hee University.
   `,
 };
 
