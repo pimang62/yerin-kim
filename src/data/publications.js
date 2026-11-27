@@ -16,7 +16,7 @@ export const publications = [
   {
     year: 2026, category: "conference", selected: true,
     title: "FiRe: Fine-grained Multimodal Reasoning for Enhanced Image Generation",
-    authors: "Yongjin Kim, Yoonjin Oh*, Ye Rin Kim*, Hyomin Kim, Jeeyoung Yun, Yujung Heo, Minjun Kim, Sungwoong Kim",
+    authors: "Yongjin Kim, Yoonjin Oh*, Ye Rin Kim*, Hyomin Kim, Jeeyoung Yun, Yujung Heo, Minjun Kim, Sungwoong Kim†",
     venue: "NeurIPS 2026",
     links: { paper: "https://arxiv.org/pdf/2604.13491" },
   },
